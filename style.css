@@ -45,7 +45,7 @@ p {
 }
 
 .hero__container {
-  width: 50%;
+  width: 60%;
   min-width: 350px;
   flex-grow: 0;
 }
@@ -116,7 +116,7 @@ p {
 }
 
 .panel__text--light {
-  color: var(--bg-col-white);
+  color: var(--bg-col-light);
 }
 
 /* Shared across panels */
@@ -133,4 +133,21 @@ p {
 .img-container img {
   width: 100%;
   min-width: 100px;
+}
+
+
+.footer {
+  justify-content: space-between;
+  min-height: 0;
+  background-color: var(--bg-col-dark);
+  flex-grow: 0;
+}
+
+.footer__text {
+  font-size: 1rem;
+}
+
+.footer .text-container {
+  display: flex;
+  justify-content: space-between;
 }
