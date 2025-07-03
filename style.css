@@ -3,6 +3,8 @@
   --bg-col-light: #F3EED9;
   --bg-col-med: #824936;
   --bg-col-dark: #222C2A;
+
+  --max-width-px: 1128px;
 }
 
 *, *::before, *::after {
@@ -26,7 +28,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1128px;
+  max-width: var(--max-width-px);
   flex-grow: 1;
 }
 
@@ -72,7 +74,6 @@ p {
   margin-bottom: 2rem;
 }
 
-/* Panel 2: Quality Designs */
 .panel--white {
   background-color: var(--bg-col-white);
 }
@@ -91,7 +92,6 @@ p {
   color: var(--bg-col-dark);
 }
 
-/* Panel 3: Made Custom */
 .panel--dark {
   background-color: var(--bg-col-dark);
 }
@@ -105,7 +105,6 @@ p {
   color: var(--bg-col-light)
 }
 
-/* Panel 4: Created with Care */
 .panel--med {
   background-color: var(--bg-col-med);
 }
@@ -119,7 +118,6 @@ p {
   color: var(--bg-col-light);
 }
 
-/* Shared across panels */
 .panel--white .text-container,
 .panel--dark .container,
 .panel--med .container {
@@ -150,4 +148,40 @@ p {
 .footer .text-container {
   display: flex;
   justify-content: space-between;
+}
+
+/* 
+  Cannot use: var(--max-width-px) inside condition.
+  Not entirely sure what the best work-around is here.
+*/
+@media (max-width: calc(1128px + 2rem)) {
+  .container {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .text-container,
+  .panel--dark .container,
+  .panel--med .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container {
+    margin: 1.25rem;
+  }
+
+  .img-container {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+    }
+  }
 }
