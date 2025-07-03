@@ -1,0 +1,136 @@
+:root {
+  --bg-col-white: #F5F5F5;
+  --bg-col-light: #F3EED9;
+  --bg-col-med: #824936;
+  --bg-col-dark: #222C2A;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, .hero__heading, .panel__heading {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.panel {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1128px;
+  flex-grow: 1;
+}
+
+p {
+  font-family: "Roboto";
+  font-size: 1.3125rem;
+  font-weight: 300;
+}
+
+/* Panel 1: Hero */
+.hero {
+  background-color: var(--bg-col-light);
+  text-align: center;
+  min-height: 660px;
+  height: 100vh;
+}
+
+.hero__container {
+  width: 50%;
+  min-width: 350px;
+  flex-grow: 0;
+}
+
+.hero__heading--thin {
+  font-family: "Roboto";
+  color: var(--bg-col-dark);
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: 0.75ex;
+  text-transform: uppercase;
+}
+
+.hero__heading--bold {
+  color: var(--bg-col-med);
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 3.75rem;
+}
+
+.panel__heading {
+  font-family: "Playfair Display";
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Panel 2: Quality Designs */
+.panel--white {
+  background-color: var(--bg-col-white);
+}
+
+.panel__heading--med {
+  color: var(--bg-col-med);
+  text-align: center;
+}
+
+.panel--white .text-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel__text--dark {
+  color: var(--bg-col-dark);
+}
+
+/* Panel 3: Made Custom */
+.panel--dark {
+  background-color: var(--bg-col-dark);
+}
+
+.panel--dark .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel__heading--light {
+  color: var(--bg-col-light)
+}
+
+/* Panel 4: Created with Care */
+.panel--med {
+  background-color: var(--bg-col-med);
+}
+
+.panel--med .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel__text--light {
+  color: var(--bg-col-white);
+}
+
+/* Shared across panels */
+.panel--white .text-container,
+.panel--dark .container,
+.panel--med .container {
+  gap: 2rem;
+}
+
+.img-container {
+  width: 100%;
+}
+
+.img-container img {
+  width: 100%;
+  min-width: 100px;
+}
